@@ -1,0 +1,38 @@
+<html>
+<body>
+<script>
+  
+function validateform(){  
+var name=document.f1.name.value;  
+var password=document.f1.password.value;  
+  
+if ((name==20)&&(password=="maru")){  
+  document.write("sign into your account");
+  return true;  
+}  
+  else{
+  alert("invalid");
+  } 
+}  
+function invalid(){
+alert("invalid rollno");
+}
+function invalid2(){
+alert("invalid password");
+}
+</script>  
+<body>  
+<center>
+<div>
+<form name="f1" method="post" >  
+RollNo: <input type="text" name="name" placeholder="RollNo" oninvalid="invalid()" required /><br/>  
+</br>
+Password: <input type="password" name="password" placeholder="password" oninvalid="invalid2()" required /><br/> 
+</br> 
+<input type="button" value="signin" onclick=validateform() /> </br><br>
+<button><a href="C:\Users\jaga\Desktop\maru\project\register.html">register</a></button></br><br>
+<input type="radio" name="gender" value="staff">staff
+<input type="radio" name="gender" value="student secratory">student secratory<br>
+</form> </div></center> 
+</body>
+</html>

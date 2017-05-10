@@ -1,0 +1,117 @@
+<html>
+ 
+<head>
+  
+<title>Page Title</title>
+
+<script type="text/JavaScript ">
+
+/*function valid()
+{
+   first_name=f1.i1.value;
+   secound_name=f1.i2.value;
+   age=f1.i3.value;
+   address=f1.i4.value;
+   email=f1.i5.value;
+   
+   if((first_name =="m") &&(secound_name =="a")&&(age==17)&&(address=="cbe")&&(email=="maru")){
+      alert ("success") ;
+   }
+   else
+   alert("invalid");
+}*/
+
+
+function invalid(){
+    name =document.f1.i1.value;
+   if((name=="")||(name==null)){
+      alert("invalid name") ;
+   }
+   secound_name =document.f1.i2.value;
+   if((secound_name =="")||(secound_name ==null)){
+      alert("invalid password") ;
+   }
+   age=document.f1.i3.value;
+   if((age=="")||(age==null )||(age==Number ))
+   {
+      alert("invalid age") ;
+   }
+   address =document.f1.i4.value;
+   if((address =="")||(address ==null)){
+      alert("invalid address");
+   }
+   email =document.f1.i5.value;
+   var i=email.indexOf('@');
+   var j=email.indexOf('.');
+   
+   if (i<1 || j<i+2 || j+2>=email.length){  
+  alert("Please enter a valid e-mail address \n i:"+i+"\n j:"+j);  
+  return false;  
+  }  
+  document.write("created");
+}
+function valid(){
+   alert("success") ;
+
+}
+
+
+</script>
+        
+</head>
+    
+<body>
+
+<center>   
+
+<form name="f1">
+ 
+fname:<br><input type="text" id="i1" placeholder="first name" oninvalid="invalid()" required /> 
+<br>
+      
+lname:<br><input type="text" id="i2" placeholder="last name" oninvalid="invalid()" required />
+<br>
+       
+age:<br><input type="text" id="i3" placeholder="age" oninvalid="invalid()" required/>
+<br>
+        
+address:<br><textarea id="i4" placeholder="address" oninvalid="invalid()" width="200px" height="200px" required /></textarea>
+<br>
+        
+email:<br><input type="text" id="i5" placeholder="email" oninvalid="invalid()" required />
+<br><br>
+        
+gender:
+<input type="radio" name="gender" value="male">male
+       
+<input type="radio" name="gender" value="female">female<br><br>
+        
+you live in:
+        
+<select name="country" size="1"><br>
+       
+<option>india</option>
+        
+<option>singapore</option>
+
+<option>malaysia</option>
+
+<option>china</option>
+
+<option>london</option>
+        
+</select><br><br>
+        
+<input type="button" value="submit" onclick="invalid()">
+<br>
+<br>
+ 
+<button><a href="C:\Users\jaga\Desktop\maru\project\login.html">signin</a></button>
+      
+</form>
+  
+</center>
+
+</body>
+
+</html>
